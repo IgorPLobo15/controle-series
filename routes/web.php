@@ -8,4 +8,5 @@ Route::get('/', function () {
 use App\Http\Controllers\SeriesController;
 
 Route::get('/series', [SeriesController::class, 'index']);
+Route::get('/series/criar', [SeriesController::class, 'create']);
 

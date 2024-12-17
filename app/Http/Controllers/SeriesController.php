@@ -14,11 +14,11 @@ class SeriesController extends Controller
             'Stranger Things'
         ];
 
-        $html = '<ul>';
-        foreach ($series as $serie) {
-            $html .= "<li>$serie</li>";
-        }
-        $html .= '</ul>';
-        return $html;
+        return view('series.index')->with('series',$series);
+    }
+
+    public function create()
+    {
+        return view('series.create');
     }
 }
